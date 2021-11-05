@@ -1,0 +1,7 @@
+package com.transmit.backup.model.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface PersonasRepository extends MongoRepository<PersonasDTO, String> {
+
+}

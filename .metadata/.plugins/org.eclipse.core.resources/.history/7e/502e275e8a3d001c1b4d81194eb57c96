@@ -1,0 +1,30 @@
+package com.transmit.backup;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.mongodb.MongoException;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoDatabase;
+
+public class connection {
+	
+	Logger logger = LoggerFactory.getLogger(connection.class);
+	 
+	public MongoDatabase connect() {
+		
+		MongoClient mongo = null;
+		String servidor = "localhost";
+		Integer puerto = 27017;
+		
+	    try {
+//	    	mongo = MongoClient.create(servidor,puerto);
+//	    	MongoClient mongoClient = MongoClient.create("mongodb://host1:27030,host2:27017,host3:27017");
+	    	mongo = new MongoClient(servidor, puerto);
+
+	    		
+	    }catch(MongoException e) {
+	    	logger.info("Ocurrio un error " + e);
+	    }
+	}
+}

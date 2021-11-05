@@ -1,0 +1,5 @@
+package com.transmit.backup.model;
+
+public class PersonasDTO {
+
+}

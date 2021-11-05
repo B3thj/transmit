@@ -1,0 +1,23 @@
+package com.transmit.backup;
+
+import java.util.logging.Logger;
+
+import com.mongodb.MongoException;
+import com.mongodb.client.MongoClient;
+
+public class connection {
+	
+	public MongoDatabase connect() {
+		
+		MongoClient mongo = null;
+		String servidor = "localhost";
+		Integer puerto = 27017;
+		
+	    try {
+	    	mongo = new MongoClient(servidor,puerto);
+	    }catch(MongoException e) {
+	    	logger.info("Ocurrio un error " + e);
+	    }
+	    
+	}
+}

@@ -1,0 +1,21 @@
+package com.transmit.backup;
+
+import java.rmi.UnknownHostException;
+
+import com.mongodb.client.MongoClient;
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		System.out.println("prueba de conexion a mongo ");
+		
+		MongoClient mongo = null;
+		
+		try {
+			mongo = new MongoClient("localhost", 27030);
+		}catch(UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,34 @@
+package com.transmit.backup;
+
+import java.rmi.UnknownHostException;
+
+import com.mongodb.client.MongoClient;
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		System.out.println("prueba de conexion a mongo ");
+		
+		
+		try {
+			
+
+			MongoClient client = new MongoClient("localhost", 27030);
+			MongoClient mongoClient = new MongoClient();
+			public MongoDatabase connect(String host, int port, ) {
+				
+			}
+			
+			
+			 DB db = client.getDB ("employees"); // base de datos
+
+				for(String name : db.getCollectionNames()) {
+					 System.out.println ("Nombre de la colección" + nombre);
+
+			
+		}catch(UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+}
